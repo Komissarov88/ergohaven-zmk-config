@@ -235,7 +235,7 @@
                 <&enc_vol>;
         };
 
-        num {
+        numbers {
             bindings = <
 &kp F12       &kp F1  &kp F2         &kp F3           &kp F4         &kp F5                                 &kp F6  &kp F7    &kp F8  &kp F9               &kp F10           &kp BACKSPACE
 &kp F11       &none   &kp HOME       &kp UP           &kp END        &kp INS                                &none   &kp N7    &kp N8  &kp N9               &kp LS(NUMBER_8)  &kp KP_ASTERISK
@@ -247,7 +247,7 @@
             display-name = "Nav";
         };
 
-        sym {
+        symbols {
             bindings = <
 &none         &none         &kp LS(KP_NUMBER_8)  &none                &none             &none                                          &none            &none                &kp LS(KP_NUMBER_5)  &none                &none                &kp BACKSPACE
 &none         &none         &kp LS(KP_PLUS)      &kp EQUAL            &kp LS(KP_MINUS)  &kp KP_NUMBER_7                                &none            &kp KP_NUMBER_1      &kp UNDER            &kp KP_NUMBER_2      &none                &multicursor_up
@@ -261,11 +261,11 @@
 
         macro {
             bindings = <
-&tog 12  &none            &none  &none                  &to 4   &none                     &none        &none   &to 8   &none   &none                 &none
-&none    &vim_last_macro  &none  &vim_end_of_prev_word  &none   &none                     &none        &none   &none   &none   &none                 &none
-&none    &none            &none  &none                  &none   &none                     &kp K_CALC   &none   &none   &none   &none                 &none
-&trans   &none            &none  &none                  &none   &none   &trans    &trans  &vim_normal  &none   &none   &none   &vim_last_ex_command  &trans
-                          &none  &none                  &trans  &trans  &trans    &trans  &trans       &trans  &trans  &trans
+&tog 12       &none            &none  &none                  &to 4     &none                                 &none        &none     &to 8  &none  &none                 &none
+&none         &vim_last_macro  &none  &vim_end_of_prev_word  &none     &none                                 &none        &none     &none  &none  &none                 &none
+&none         &none            &none  &none                  &none     &none                                 &kp K_CALC   &none     &none  &none  &none                 &none
+&kp LEFT_ALT  &none            &none  &none                  &none     &none   &kp TAB      &kp ENTER        &vim_normal  &none     &none  &none  &vim_last_ex_command  &kp RCTRL
+                               &none  &none                  &kp RGUI  &trans  &kp SPACE    &kp RIGHT_SHIFT  &trans       &kp RGUI  &none  &none
             >;
 
             display-name = "Adjust";
@@ -355,8 +355,8 @@
         diablo {
             bindings = <
 &none    &none  &none  &none  &none  &none                             &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &to 0  &kp BACKSPACE
-&kp ESC  &none  &none  &none  &none  &none                             &none         &kp Q         &kp W         &kp E         &kp R  &kp T
-&none    &none  &none  &none  &none  &none                             &none         &kp A         &kp S         &kp D         &kp F  &kp G
+&kp ESC  &none  &none  &none  &none  &none                             &kp J         &kp Q         &kp W         &kp E         &kp R  &kp T
+&none    &none  &none  &none  &none  &none                             &kp K         &kp A         &kp S         &kp D         &kp F  &kp G
 &none    &none  &none  &none  &none  &none   &none    &kp RIGHT_ALT    &kp RCTRL     &kp Z         &kp X         &kp C         &kp V  &kp B
                 &none  &none  &none  &mo 13  &none    &kp RIGHT_SHIFT  &mo 14        &kp SPACE     &kp M         &kp TAB
             >;
