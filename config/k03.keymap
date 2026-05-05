@@ -119,7 +119,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp CAPSLOCK>,
+                <&kp CAPS>,
                 <&macro_tap>,
                 <&kp LEFT>,
                 <&macro_release>,
@@ -133,11 +133,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp CAPSLOCK>,
+                <&kp CAPS>,
                 <&macro_tap>,
                 <&kp RIGHT>,
                 <&macro_release>,
-                <&kp CLCK>;
+                <&kp CAPS>;
 
             label = "WORD_RIGHT";
         };
@@ -211,6 +211,20 @@
 
             label = "PASTE";
         };
+
+        set_ru: set_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RC(RIGHT_GUI)>,
+                <&macro_tap>,
+                <&kp R>,
+                <&macro_release>,
+                <&kp RC(RIGHT_GUI)>;
+
+            label = "SET_RU";
+        };
     };
 
     keymap {
@@ -235,11 +249,11 @@
                 <&enc_vol>;
         };
 
-        numbers {
+        navigation {
             bindings = <
 &kp F12       &kp F1  &kp F2         &kp F3           &kp F4         &kp F5                                 &kp F6  &kp F7    &kp F8  &kp F9               &kp F10           &kp BACKSPACE
 &kp F11       &none   &kp HOME       &kp UP           &kp END        &kp INS                                &none   &kp N7    &kp N8  &kp N9               &kp LS(NUMBER_8)  &kp KP_ASTERISK
-&none         &none   &kp LEFT       &kp DOWN         &kp RIGHT      &kp RET                                &none   &kp N4    &kp N5  &kp N6               &kp MINUS         &kp LS(MINUS)
+&none         &none   &kp LEFT       &kp DOWN         &kp RIGHT      &kp RET                                &none   &kp N4    &kp N5  &kp N6               &kp MINUS         &kp PLUS
 &kp LEFT_ALT  &none   &word_left     &kp PRINTSCREEN  &word_right    &kp DEL  &kp TAB      &kp ENTER        &none   &kp N1    &kp N2  &kp N3               &kp KP_EQUAL      &kp RCTRL
                       &kp PAGE_DOWN  &kp PG_UP        &kp RIGHT_GUI  &trans   &kp SPACE    &kp RIGHT_SHIFT  &mo 3   &kp RGUI  &kp N0  &kp LS(KP_NUMBER_0)
             >;
@@ -261,7 +275,7 @@
 
         macro {
             bindings = <
-&tog 12       &none            &none  &none                  &to 4     &none                                 &none        &none     &to 8  &none  &none                 &none
+&tog 12       &none            &none  &none                  &to 4     &to 5                                 &to 6        &none     &to 8  &none  &none                 &none
 &none         &vim_last_macro  &none  &vim_end_of_prev_word  &none     &none                                 &none        &none     &none  &none  &none                 &none
 &none         &none            &none  &none                  &none     &none                                 &kp K_CALC   &none     &none  &none  &none                 &none
 &kp LEFT_ALT  &none            &none  &none                  &none     &none   &kp TAB      &kp ENTER        &vim_normal  &none     &none  &none  &vim_last_ex_command  &kp RCTRL
@@ -271,58 +285,58 @@
             display-name = "Adjust";
         };
 
-        media {
+        blue {
             display-name = "Adjust";
             bindings = <
-&bootloader  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0                  &none         &none         &none             &none         &to 0  &none
-&bt BT_CLR   &none         &none         &none         &none         &none                         &none         &none         &none             &none         &none  &studio_unlock
-&none        &none         &none         &none         &none         &none                         &out OUT_BLE  &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &none  &none
-&none        &none         &none         &none         &none         &none         &none    &none  &out OUT_USB  &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &none  &none
-                           &none         &none         &none         &mo 5         &none    &none  &mo 6         &none         &none             &none
+&bootloader  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 0                    &none  &none         &none             &none         &to 0  &none
+&bt BT_CLR   &none         &none         &none         &none         &studio_unlock                  &none  &none         &none             &none         &none  &none
+&none        &none         &none         &none         &none         &none                           &none  &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &none  &none
+&none        &none         &none         &none         &none         &none           &none    &none  &none  &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &none  &none
+                           &out OUT_USB  &out OUT_BLE  &none         &none           &none    &none  &none  &none         &none             &none
             >;
         };
 
-        layer_5 {
+        d1 {
             bindings = <
-&none  &none  &none  &none  &none  &none                   &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                   &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                   &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none   &none    &none  &none  &none  &none  &none  &none  &none
-              &none  &none  &none  &trans  &none    &none  &mo 7  &none  &none  &none
+&none    &none  &none  &none  &none  &none                            &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &to 0  &kp BACKSPACE
+&kp ESC  &none  &none  &none  &none  &none                            &kp J         &kp Q         &kp W         &kp E         &kp R  &kp T
+&none    &none  &none  &none  &none  &none                            &kp K         &kp A         &kp S         &kp D         &kp F  &kp G
+&none    &none  &none  &none  &none  &none  &none    &kp RIGHT_ALT    &kp RCTRL     &kp Z         &kp X         &kp C         &kp V  &kp B
+                &none  &none  &none  &none  &none    &kp RIGHT_SHIFT  &mo 7         &kp SPACE     &kp M         &kp TAB
             >;
         };
 
-        layer_6 {
-            bindings = <
-&none  &none  &none  &none  &none  &none                  &none   &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                  &none   &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                  &none   &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none    &none  &none   &none  &none  &none  &none  &none
-              &none  &none  &none  &mo 7  &none    &none  &trans  &none  &none  &none
-            >;
-        };
-
-        layer_7 {
-            bindings = <
-&none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none   &none    &none  &none   &none  &none  &none  &none  &none
-              &none  &none  &none  &trans  &none    &none  &trans  &none  &none  &none
-            >;
-        };
-
-        layer_8 {
+        numbers {
             bindings = <
 &none  &none  &none  &none  &none  &none                            &none   &none          &none         &none                &to 0             &kp BACKSPACE
 &none  &none  &none  &none  &none  &none                            &none   &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9         &kp LS(NUMBER_8)  &kp KP_MULTIPLY
 &none  &none  &none  &none  &none  &none                            &none   &kp NUMBER_4   &kp NUMBER_5  &kp N6               &kp MINUS         &kp PLUS
 &none  &none  &none  &none  &none  &none  &none    &kp ENTER        &none   &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3         &kp KP_EQUAL      &kp RCTRL
-              &none  &none  &none  &mo 9  &none    &kp RIGHT_SHIFT  &mo 10  &kp RIGHT_GUI  &kp NUMBER_0  &kp LS(KP_NUMBER_0)
+              &none  &none  &none  &none  &none    &kp RIGHT_SHIFT  &trans  &kp RIGHT_GUI  &kp NUMBER_0  &kp LS(KP_NUMBER_0)
             >;
         };
 
-        layer_9 {
+        d2 {
+            bindings = <
+&none  &none  &none  &none  &none  &none                  &none   &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                  &none   &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                  &none   &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none    &none  &none   &none  &none  &none  &none  &none
+              &none  &none  &none  &none  &none    &none  &trans  &none  &none  &none
+            >;
+        };
+
+        m1 {
+            bindings = <
+&none  &none  &none  &none  &none  &none                  &none   &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                  &none   &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                  &none   &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none    &none  &none   &none  &none  &none  &none  &none
+              &none  &none  &none  &mo 9  &none    &none  &mo 10  &none  &none  &none
+            >;
+        };
+
+        m2 {
             bindings = <
 &none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
@@ -332,7 +346,7 @@
             >;
         };
 
-        layer_10 {
+        m3 {
             bindings = <
 &none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
@@ -342,9 +356,9 @@
             >;
         };
 
-        layer_11 {
+        m4 {
             bindings = <
-&none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &to 0  &none
 &none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none   &none    &none  &none   &none  &none  &none  &none  &none
@@ -352,43 +366,55 @@
             >;
         };
 
-        diablo {
+        w1 {
+            display-name = "Base";
             bindings = <
-&none    &none  &none  &none  &none  &none                             &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &to 0  &kp BACKSPACE
-&kp ESC  &none  &none  &none  &none  &none                             &kp J         &kp Q         &kp W         &kp E         &kp R  &kp T
-&none    &none  &none  &none  &none  &none                             &kp K         &kp A         &kp S         &kp D         &kp F  &kp G
-&none    &none  &none  &none  &none  &none   &none    &kp RIGHT_ALT    &kp RCTRL     &kp Z         &kp X         &kp C         &kp V  &kp B
-                &none  &none  &none  &mo 13  &none    &kp RIGHT_SHIFT  &mo 14        &kp SPACE     &kp M         &kp TAB
+&kp GRAVE         &kp N1  &kp N2    &kp N3            &kp N4     &kp N5                                &kp N6  &kp N7     &kp N8            &kp N9             &kp N0    &kp BSPC
+&esc_set_en       &kp Q   &kp W     &kp E             &kp R      &kp T                                 &kp Y   &kp U      &kp I             &kp O              &kp P     &kp SLASH
+&switch_language  &kp A   &kp S     &kp D             &kp F      &kp G                                 &kp H   &kp J      &kp K             &kp L              &kp SEMI  &kp SQT
+&kp LEFT_ALT      &kp Z   &kp X     &kp C             &kp V      &kp B   &kp TAB      &kp ENTER        &kp N   &kp M      &kp COMMA         &kp DOT            &kp FSLH  &kp RGUI
+                          &kp SEMI  &kp SINGLE_QUOTE  &kp LCTRL  &mo 13  &kp SPACE    &kp RIGHT_SHIFT  &mo 14  &kp RCTRL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+            >;
+
+            sensor-bindings =
+                <&enc_vol>,
+                <&enc_vol>,
+                <&enc_vol>,
+                <&enc_vol>,
+                <&enc_vol>,
+                <&enc_vol>;
+        };
+
+        w2 {
+            display-name = "Nav";
+            bindings = <
+&kp F12       &kp F1  &kp F2         &kp F3           &kp F4               &kp F5                                 &kp F6  &kp F7     &kp F8  &kp F9     &kp F10     &kp BACKSPACE
+&kp F11       &none   &kp HOME       &kp UP           &kp END              &kp INS                                &none   &kp N7     &kp N8  &kp N9     &kp LS(N8)  &kp SLASH
+&none         &none   &kp LEFT       &kp DOWN         &kp RIGHT            &kp RET                                &none   &kp N4     &kp N5  &kp N6     &kp MINUS   &kp PLUS
+&kp LEFT_ALT  &none   &kp LC(LEFT)   &kp PRINTSCREEN  &kp LC(RIGHT_ARROW)  &kp DEL  &kp TAB      &kp ENTER        &none   &kp N1     &kp N2  &kp N3     &kp DOT     &kp RGUI
+                      &kp PAGE_DOWN  &kp PG_UP        &kp LCTRL            &trans   &kp SPACE    &kp RIGHT_SHIFT  &mo 15  &kp RCTRL  &kp N0  &kp COLON
             >;
         };
 
-        layer_13 {
+        w3 {
+            display-name = "Symbols";
             bindings = <
-&none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none   &none    &none  &none   &none  &none  &none  &none  &none
-              &none  &none  &none  &trans  &none    &none  &mo 15  &none  &none  &none
+&none         &none          &kp AT_SIGN    &none       &none             &none                                    &none            &none             &kp CARET      &none              &none              &kp BACKSPACE
+&none         &none          &kp LESS_THAN  &kp EQUAL   &kp GREATER_THAN  &kp GRAVE                                &none            &kp LEFT_BRACKET  &kp UNDER      &kp RIGHT_BRACKET  &none              &multicursor_up
+&none         &kp BACKSLASH  &kp LPAR       &kp MINUS   &kp RPAR          &kp PLUS                                 &kp PRCNT        &kp LEFT_BRACE    &kp DQT        &kp RIGHT_BRACE    &kp QMARK          &multicursor_down
+&kp LEFT_ALT  &none          &kp STAR       &kp COLON   &kp SLASH         &none      &kp TAB      &kp ENTER        &kp EXCLAMATION  &kp PIPE          &kp TILDE      &kp AMPERSAND      &desktop_overview  &kp RGUI
+                             &kp HASH       &kp DOLLAR  &kp LCTRL         &mo 15     &kp SPACE    &kp RIGHT_SHIFT  &trans           &kp RCTRL         &desktop_left  &desktop_right
             >;
         };
 
-        layer_14 {
+        w4 {
+            display-name = "Adjust";
             bindings = <
-&none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none   &none    &none  &none   &none  &none  &none  &none  &none
-              &none  &none  &none  &mo 15  &none    &none  &trans  &none  &none  &none
-            >;
-        };
-
-        layer_15 {
-            bindings = <
-&none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                   &none   &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none   &none    &none  &none   &none  &none  &none  &none  &none
-              &none  &none  &none  &trans  &none    &none  &trans  &none  &none  &none
+&none         &none            &none  &none                  &to 4      &to 5                                 &to 6        &none      &to 8  &none  &to 0                 &none
+&none         &vim_last_macro  &none  &vim_end_of_prev_word  &none      &none                                 &none        &none      &none  &none  &none                 &none
+&none         &none            &none  &none                  &none      &none                                 &kp K_CALC   &none      &none  &none  &none                 &none
+&kp LEFT_ALT  &none            &none  &none                  &none      &none   &kp TAB      &kp ENTER        &vim_normal  &none      &none  &none  &vim_last_ex_command  &kp RGUI
+                               &none  &none                  &kp LCTRL  &trans  &kp SPACE    &kp RIGHT_SHIFT  &trans       &kp RCTRL  &none  &none
             >;
         };
     };
