@@ -266,11 +266,11 @@
 
         l3 {
             bindings = <
-&none         &none         &kp LS(KP_NUMBER_8)  &none                &none             &none                                        &none            &copy                &kp LS(KP_NUMBER_5)  &paste               &kp DEL              &kp BACKSPACE
-&none         &none         &kp LS(KP_PLUS)      &kp EQUAL            &kp LS(KP_MINUS)  &kp KP_NUMBER_7                              &none            &kp KP_NUMBER_1      &kp UNDER            &kp KP_NUMBER_2      &none                &multicursor_up
-&none         &kp KP_SLASH  &kp LPAR             &kp MINUS            &kp RPAR          &kp PLUS                                     &kp PRCNT        &kp LS(KP_NUMBER_1)  &kp LS(KP_NUMBER_3)  &kp LS(KP_NUMBER_2)  &kp LS(KP_ASTERISK)  &multicursor_down
-&kp LEFT_ALT  &none         &kp STAR             &kp LS(KP_NUMBER_0)  &kp KP_ASTERISK   &none            &none      &none            &kp EXCLAMATION  &kp LS(KP_SLASH)     &kp LS(KP_NUMBER_7)  &kp LS(KP_NUMBER_6)  &desktop_overview    &kp ENTER
-                            &kp LS(KP_NUMBER_9)  &kp LS(KP_NUMBER_4)  &kp RIGHT_GUI     &mo 3            &kp TAB    &kp RIGHT_SHIFT  &trans           &kp RIGHT_GUI        &desktop_left        &desktop_right
+&none         &none         &kp LS(KP_NUMBER_8)  &none                &none             &none                                          &none            &copy                &kp LS(KP_NUMBER_5)  &paste               &kp DEL              &kp BACKSPACE
+&none         &none         &kp LS(KP_PLUS)      &kp EQUAL            &kp LS(KP_MINUS)  &kp KP_NUMBER_7                                &none            &kp KP_NUMBER_1      &kp UNDER            &kp KP_NUMBER_2      &none                &multicursor_up
+&none         &kp KP_SLASH  &kp LPAR             &kp MINUS            &kp RPAR          &kp PLUS                                       &kp PRCNT        &kp LS(KP_NUMBER_1)  &kp LS(KP_NUMBER_3)  &kp LS(KP_NUMBER_2)  &kp LS(KP_ASTERISK)  &multicursor_down
+&kp LEFT_ALT  &none         &kp STAR             &kp LS(KP_NUMBER_0)  &kp KP_ASTERISK   &kp TAB          &none        &none            &kp EXCLAMATION  &kp LS(KP_SLASH)     &kp LS(KP_NUMBER_7)  &kp LS(KP_NUMBER_6)  &desktop_overview    &kp ENTER
+                            &kp LS(KP_NUMBER_9)  &kp LS(KP_NUMBER_4)  &kp RIGHT_GUI     &mo 3            &kp SPACE    &kp RIGHT_SHIFT  &trans           &kp RIGHT_GUI        &desktop_left        &desktop_right
             >;
 
             display-name = "Symbols";
