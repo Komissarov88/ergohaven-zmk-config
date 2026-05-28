@@ -205,7 +205,7 @@
                 <&macro_press>,
                 <&kp RGUI>,
                 <&macro_tap>,
-                <&kp P>,
+                <&kp V>,
                 <&macro_release>,
                 <&kp RIGHT_GUI>;
 
