@@ -359,11 +359,11 @@
         m2 {
             display-name = "m2";
             bindings = <
-&kp F12       &kp F1     &kp F2         &kp F3           &kp F4               &kp F5                               &kp F6  &kp F7         &kp F8  &kp F9     &kp F10     &kp BACKSPACE
-&kp F11       &none      &kp RG(LEFT)   &kp UP           &kp RG(RIGHT)        &kp INS                              &none   &kp N7         &kp N8  &kp N9     &kp LS(N8)  &kp SLASH
-&none         &none      &kp LEFT       &kp DOWN         &kp RIGHT            &kp RET                              &none   &kp N4         &kp N5  &kp N6     &kp MINUS   &kp PLUS
-&kp LEFT_ALT  &kp RCTRL  &kp LA(LEFT)   &kp PRINTSCREEN  &kp LA(RIGHT_ARROW)  &kp DEL  &none      &none            &none   &kp N1         &kp N2  &kp N3     &kp DOT     &kp ENTER
-                         &kp PAGE_DOWN  &kp PG_UP        &kp LEFT_GUI         &trans   &kp TAB    &kp RIGHT_SHIFT  &mo 11  &kp RIGHT_GUI  &kp N0  &kp COLON
+&kp F12       &kp F1     &kp F2         &kp F3           &kp F4               &kp F5                                 &kp F6  &kp F7         &kp F8  &kp F9     &kp F10     &kp BACKSPACE
+&kp F11       &none      &kp RG(LEFT)   &kp UP           &kp RG(RIGHT)        &kp INS                                &none   &kp N7         &kp N8  &kp N9     &kp LS(N8)  &kp SLASH
+&none         &none      &kp LEFT       &kp DOWN         &kp RIGHT            &kp RET                                &none   &kp N4         &kp N5  &kp N6     &kp MINUS   &kp PLUS
+&kp LEFT_ALT  &kp RCTRL  &kp LA(LEFT)   &kp PRINTSCREEN  &kp LA(RIGHT_ARROW)  &kp DEL  &none        &none            &none   &kp N1         &kp N2  &kp N3     &kp DOT     &kp ENTER
+                         &kp PAGE_DOWN  &kp PG_UP        &kp LEFT_GUI         &trans   &kp SPACE    &kp RIGHT_SHIFT  &mo 11  &kp RIGHT_GUI  &kp N0  &kp COLON
             >;
         };
 
@@ -411,11 +411,11 @@
         w2 {
             display-name = "W2";
             bindings = <
-&kp F12       &kp F1     &kp F2         &kp F3           &kp F4               &kp F5                               &kp F6  &kp F7     &kp F8  &kp F9     &kp F10     &kp BACKSPACE
-&kp F11       &none      &kp HOME       &kp UP           &kp END              &kp INS                              &none   &kp N7     &kp N8  &kp N9     &kp LS(N8)  &kp SLASH
-&none         &none      &kp LEFT       &kp DOWN         &kp RIGHT            &kp RET                              &none   &kp N4     &kp N5  &kp N6     &kp MINUS   &kp PLUS
-&kp LEFT_ALT  &kp RCTRL  &kp LC(LEFT)   &kp PRINTSCREEN  &kp LC(RIGHT_ARROW)  &kp DEL  &none      &none            &none   &kp N1     &kp N2  &kp N3     &kp DOT     &kp ENTER
-                         &kp PAGE_DOWN  &kp PG_UP        &kp LCTRL            &trans   &kp TAB    &kp RIGHT_SHIFT  &mo 15  &kp RCTRL  &kp N0  &kp COLON
+&kp F12       &kp F1     &kp F2         &kp F3           &kp F4               &kp F5                                 &kp F6  &kp F7     &kp F8  &kp F9     &kp F10     &kp BACKSPACE
+&kp F11       &none      &kp HOME       &kp UP           &kp END              &kp INS                                &none   &kp N7     &kp N8  &kp N9     &kp LS(N8)  &kp SLASH
+&none         &none      &kp LEFT       &kp DOWN         &kp RIGHT            &kp RET                                &none   &kp N4     &kp N5  &kp N6     &kp MINUS   &kp PLUS
+&kp LEFT_ALT  &kp RCTRL  &kp LC(LEFT)   &kp PRINTSCREEN  &kp LC(RIGHT_ARROW)  &kp DEL  &none        &none            &none   &kp N1     &kp N2  &kp N3     &kp DOT     &kp ENTER
+                         &kp PAGE_DOWN  &kp PG_UP        &kp LCTRL            &trans   &kp SPACE    &kp RIGHT_SHIFT  &mo 15  &kp RCTRL  &kp N0  &kp COLON
             >;
         };
 
