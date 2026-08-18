@@ -453,7 +453,7 @@
 &none         &none          &kp AT_SIGN    &none       &none             &none                                    &none            &copy_w           &kp CARET      &paste_w           &kp DEL            &kp BACKSPACE
 &none         &none          &kp LESS_THAN  &kp EQUAL   &kp GREATER_THAN  &kp GRAVE                                &none            &kp LEFT_BRACKET  &kp UNDER      &kp RIGHT_BRACKET  &none              &multicursor_up
 &none         &kp BACKSLASH  &kp LPAR       &kp MINUS   &kp RPAR          &kp PLUS                                 &kp PRCNT        &kp LEFT_BRACE    &kp DQT        &kp RIGHT_BRACE    &kp QMARK          &multicursor_down
-&kp LEFT_ALT  &kp LCTRL      &kp STAR       &kp COLON   &kp SLASH         &kp TAB    &none        &none            &kp EXCLAMATION  &kp PIPE          &kp TILDE      &kp AMPERSAND      &desktop_overview  &kp ENTER
+&kp LEFT_ALT  &kp RGUI       &kp STAR       &kp COLON   &kp SLASH         &kp TAB    &none        &none            &kp EXCLAMATION  &kp PIPE          &kp TILDE      &kp AMPERSAND      &desktop_overview  &kp ENTER
                              &kp HASH       &kp DOLLAR  &kp LCTRL         &mo 15     &kp SPACE    &kp RIGHT_SHIFT  &trans           &kp RCTRL         &desktop_left  &desktop_right
             >;
         };
